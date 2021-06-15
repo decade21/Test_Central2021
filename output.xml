@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.7.3 on darwin)" generated="20210615 10:49:28.578" rpa="false">
+<suite id="s1" name="Test" source="/Users/U6078627/PycharmProjects/TestCen/Test.robot">
+<test id="s1-t1" name="Shopping Cart">
+<kw name="Open Powerbuy Website">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${POWERBUY_URL}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20210615 10:49:28.757" level="INFO">Opening browser 'Chrome' to base url 'https://www.powerbuy.co.th/th/'.</msg>
+<status status="PASS" starttime="20210615 10:49:28.756" endtime="20210615 10:49:33.960"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210615 10:49:33.960" endtime="20210615 10:49:34.474"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${Powerbuy_Logo}</arg>
+</arguments>
+<status status="PASS" starttime="20210615 10:49:34.475" endtime="20210615 10:49:34.564"></status>
+</kw>
+<status status="PASS" starttime="20210615 10:49:28.756" endtime="20210615 10:49:34.565"></status>
+</kw>
+<kw name="Search TV in SerchBox">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${Search_Inbox}</arg>
+</arguments>
+<msg timestamp="20210615 10:49:34.565" level="INFO">Clicking element 'txt-searchBox-input'.</msg>
+<status status="PASS" starttime="20210615 10:49:34.565" endtime="20210615 10:49:34.794"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Search_Inbox}</arg>
+<arg>TV</arg>
+</arguments>
+<msg timestamp="20210615 10:49:34.795" level="INFO">Typing text 'TV' into text field 'txt-searchBox-input'.</msg>
+<status status="PASS" starttime="20210615 10:49:34.794" endtime="20210615 10:49:35.180"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${Search_Button}</arg>
+</arguments>
+<msg timestamp="20210615 10:49:35.180" level="INFO">Clicking button 'btn-searchBox-input'.</msg>
+<status status="PASS" starttime="20210615 10:49:35.180" endtime="20210615 10:49:35.586"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${Text_Search_Result}</arg>
+</arguments>
+<msg timestamp="20210615 10:49:37.849" level="INFO">Suppressing StaleElementReferenceException from Selenium.</msg>
+<status status="PASS" starttime="20210615 10:49:35.586" endtime="20210615 10:49:38.100"></status>
+</kw>
+<status status="PASS" starttime="20210615 10:49:34.565" endtime="20210615 10:49:38.100"></status>
+</kw>
+<kw name="Filter TV Size">
+<arguments>
+<arg>${Filter_44_55}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>3x</arg>
+<arg>5s</arg>
+<arg>Click Element</arg>
+<arg>${filter_size}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${filter_size}</arg>
+</arguments>
+<msg timestamp="20210615 10:49:38.102" level="INFO">Clicking element 'xpath=//*[@id="layout"]/div[2]/div[3]/div[2]/div/div[2]/div[1]/div/div/div/div/div[32]/div[2]/div/div/div[1]/div[1]/div'.</msg>
+<status status="PASS" starttime="20210615 10:49:38.102" endtime="20210615 10:49:38.967"></status>
+</kw>
+<status status="PASS" starttime="20210615 10:49:38.101" endtime="20210615 10:49:38.967"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${Text_Search_Result}</arg>
+</arguments>
+<status status="PASS" starttime="20210615 10:49:38.967" endtime="20210615 10:49:41.921"></status>
+</kw>
+<status status="PASS" starttime="20210615 10:49:38.100" endtime="20210615 10:49:41.921"></status>
+</kw>
+<kw name="Select TV">
+<arguments>
+<arg>${Tv_44_55}</arg>
+</arguments>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20210615 10:49:44.923" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210615 10:49:41.922" endtime="20210615 10:49:44.923"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>3x</arg>
+<arg>5s</arg>
+<arg>Click Element</arg>
+<arg>${tv_size}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${tv_size}</arg>
+</arguments>
+<msg timestamp="20210615 10:49:44.923" level="INFO">Clicking element 'xpath=//*[@id="lnk-viewProduct-257184"]/div/div/img'.</msg>
+<status status="PASS" starttime="20210615 10:49:44.923" endtime="20210615 10:49:45.564"></status>
+</kw>
+<status status="PASS" starttime="20210615 10:49:44.923" endtime="20210615 10:49:45.564"></status>
+</kw>
+<status status="PASS" starttime="20210615 10:49:41.922" endtime="20210615 10:49:45.565"></status>
+</kw>
+<kw name="Add To Cart">
+<arguments>
+<arg>${add_to_carth_44_55}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>3x</arg>
+<arg>5s</arg>
+<arg>Click Element</arg>
+<arg>${add_cart}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${add_cart}</arg>
+</arguments>
+<msg timestamp="20210615 10:49:45.566" level="INFO">Clicking element 'btn-addCart-257184'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20210615 10:49:46.719" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-26.png"&gt;&lt;img src="selenium-screenshot-26.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210615 10:49:45.635" endtime="20210615 10:49:46.719"></status>
+</kw>
+<msg timestamp="20210615 10:49:46.721" level="FAIL">Element with locator 'btn-addCart-257184' not found.</msg>
+<status status="FAIL" starttime="20210615 10:49:45.565" endtime="20210615 10:49:46.721"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${add_cart}</arg>
+</arguments>
+<msg timestamp="20210615 10:49:51.723" level="INFO">Clicking element 'btn-addCart-257184'.</msg>
+<status status="PASS" starttime="20210615 10:49:51.722" endtime="20210615 10:49:52.005"></status>
+</kw>
+<status status="PASS" starttime="20210615 10:49:45.565" endtime="20210615 10:49:52.005"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20210615 10:49:57.006" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210615 10:49:52.005" endtime="20210615 10:49:57.006"></status>
+</kw>
+<status status="PASS" starttime="20210615 10:49:45.565" endtime="20210615 10:49:57.007"></status>
+</kw>
+<kw name="Search TV in SerchBox">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${Search_Inbox}</arg>
+</arguments>
+<msg timestamp="20210615 10:49:57.007" level="INFO">Clicking element 'txt-searchBox-input'.</msg>
+<status status="PASS" starttime="20210615 10:49:57.007" endtime="20210615 10:49:57.249"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Search_Inbox}</arg>
+<arg>TV</arg>
+</arguments>
+<msg timestamp="20210615 10:49:57.249" level="INFO">Typing text 'TV' into text field 'txt-searchBox-input'.</msg>
+<status status="PASS" starttime="20210615 10:49:57.249" endtime="20210615 10:49:57.686"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${Search_Button}</arg>
+</arguments>
+<msg timestamp="20210615 10:49:57.686" level="INFO">Clicking button 'btn-searchBox-input'.</msg>
+<status status="PASS" starttime="20210615 10:49:57.686" endtime="20210615 10:49:59.609"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${Text_Search_Result}</arg>
+</arguments>
+<status status="PASS" starttime="20210615 10:49:59.609" endtime="20210615 10:49:59.781"></status>
+</kw>
+<status status="PASS" starttime="20210615 10:49:57.007" endtime="20210615 10:49:59.781"></status>
+</kw>
+<kw name="Filter TV Size">
+<arguments>
+<arg>${Filter_32_43}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>3x</arg>
+<arg>5s</arg>
+<arg>Click Element</arg>
+<arg>${filter_size}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${filter_size}</arg>
+</arguments>
+<msg timestamp="20210615 10:49:59.782" level="INFO">Clicking element 'xpath=//*[@id="layout"]/div[2]/div[3]/div[2]/div/div[2]/div[1]/div/div/div/div/div[32]/div[2]/div/div/div[2]/div[1]/div'.</msg>
+<status status="PASS" starttime="20210615 10:49:59.782" endtime="20210615 10:50:00.488"></status>
+</kw>
+<status status="PASS" starttime="20210615 10:49:59.781" endtime="20210615 10:50:00.488"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${Text_Search_Result}</arg>
+</arguments>
+<status status="PASS" starttime="20210615 10:50:00.488" endtime="20210615 10:50:03.173"></status>
+</kw>
+<status status="PASS" starttime="20210615 10:49:59.781" endtime="20210615 10:50:03.174"></status>
+</kw>
+<kw name="Select TV">
+<arguments>
+<arg>${Tv_32_43}</arg>
+</arguments>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20210615 10:50:06.175" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210615 10:50:03.174" endtime="20210615 10:50:06.175"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>3x</arg>
+<arg>5s</arg>
+<arg>Click Element</arg>
+<arg>${tv_size}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${tv_size}</arg>
+</arguments>
+<msg timestamp="20210615 10:50:06.176" level="INFO">Clicking element 'xpath=//*[@id="lnk-viewProduct-249969"]/div/div/img'.</msg>
+<status status="PASS" starttime="20210615 10:50:06.176" endtime="20210615 10:50:06.686"></status>
+</kw>
+<status status="PASS" starttime="20210615 10:50:06.175" endtime="20210615 10:50:06.687"></status>
+</kw>
+<status status="PASS" starttime="20210615 10:50:03.174" endtime="20210615 10:50:06.687"></status>
+</kw>
+<kw name="Add To Cart">
+<arguments>
+<arg>${add_to_carth_32_43}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>3x</arg>
+<arg>5s</arg>
+<arg>Click Element</arg>
+<arg>${add_cart}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${add_cart}</arg>
+</arguments>
+<msg timestamp="20210615 10:50:06.688" level="INFO">Clicking element 'btn-addCart-249969'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20210615 10:50:07.811" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-27.png"&gt;&lt;img src="selenium-screenshot-27.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210615 10:50:06.897" endtime="20210615 10:50:07.811"></status>
+</kw>
+<msg timestamp="20210615 10:50:07.812" level="FAIL">Element with locator 'btn-addCart-249969' not found.</msg>
+<status status="FAIL" starttime="20210615 10:50:06.687" endtime="20210615 10:50:07.812"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${add_cart}</arg>
+</arguments>
+<msg timestamp="20210615 10:50:12.813" level="INFO">Clicking element 'btn-addCart-249969'.</msg>
+<status status="PASS" starttime="20210615 10:50:12.813" endtime="20210615 10:50:13.046"></status>
+</kw>
+<status status="PASS" starttime="20210615 10:50:06.687" endtime="20210615 10:50:13.046"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20210615 10:50:18.046" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210615 10:50:13.046" endtime="20210615 10:50:18.047"></status>
+</kw>
+<status status="PASS" starttime="20210615 10:50:06.687" endtime="20210615 10:50:18.047"></status>
+</kw>
+<kw name="Check Item in Cart">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20210615 10:50:23.048" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210615 10:50:18.048" endtime="20210615 10:50:23.049"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${carh_mini}</arg>
+</arguments>
+<msg timestamp="20210615 10:50:23.049" level="INFO">Clicking element 'xpath=//*[@id="btn-openMiniCart"]/img'.</msg>
+<status status="PASS" starttime="20210615 10:50:23.049" endtime="20210615 10:50:23.939"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${cart_check}</arg>
+</arguments>
+<status status="PASS" starttime="20210615 10:50:23.939" endtime="20210615 10:50:25.907"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${tv_44_55_cart_check}</arg>
+</arguments>
+<msg timestamp="20210615 10:50:25.922" level="INFO">Current page contains element 'xpath=//*[@id="lnk-viewProduct-257184"]'.</msg>
+<status status="PASS" starttime="20210615 10:50:25.907" endtime="20210615 10:50:25.923"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${tv_32_43_cart_check}</arg>
+</arguments>
+<msg timestamp="20210615 10:50:25.934" level="INFO">Current page contains element 'xpath=//*[@id="lnk-viewProduct-249969"]'.</msg>
+<status status="PASS" starttime="20210615 10:50:25.923" endtime="20210615 10:50:25.935"></status>
+</kw>
+<status status="PASS" starttime="20210615 10:50:18.047" endtime="20210615 10:50:25.935"></status>
+</kw>
+<status status="PASS" starttime="20210615 10:49:28.756" endtime="20210615 10:50:25.935" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20210615 10:49:28.580" endtime="20210615 10:50:25.936"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Test">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
